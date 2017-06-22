@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPrimero.master.cs" Inherits="GAMU12.App.MasterPrimero" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        * {
+            border: 1px solid red;
+            font-family: sans-serif;
+        }
+        body{
+            width:1348px;
+        }
+        #TextBox1,#TextBox2,#Button1{
+            width:80%;
+            margin:10px 0;
+            padding:8px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" style="z-index: 9999999; height: 5%;">
+            <div class="row">
+                <div class="col-md-6">
+                    <asp:Label ID="Label1" runat="server" Text="Gamu"></asp:Label>
+                </div>
+                <div id="login" class="col-md-6" style="text-align: center;">
+                    <div class="navbar" style="width: 40%; margin-left: 60%; height: 20px;">
+                        <div class="container-fluid">
+                            <ul class="nav navbar-nav">
+                                <li ><a href="Default.aspx">Home</a></li>
+
+                                <li>
+                                    <a class="btn btn-secondary dropdown-toggle" href="" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+                                    <div class=" text-center dropdown-menu" aria-labelledby="dropdownMenuLink" style="margin-left: -400%; ">
+                                        <div class="text-center" style="width: 350px;">
+                                            <h3>Iniciar Sesión</h3>
+                                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Usuario"></asp:TextBox>
+                                            <asp:TextBox ID="TextBox2" runat="server" placeholder="Contraseña"></asp:TextBox><br />
+                                            <asp:Button ID="Button1" class="btn-success" runat="server" Text="Login" />
+                                        </div>
+                                    </div>
+
+                                </li>
+                                <li><a href="About.aspx">Acerca</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div style="margin-top: 4.7%;"></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer style="background: black; color: white;">
+            <div class="row text-center">
+                <div class="col-md-4 text-center">
+                    <h4>Nosotros</h4>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Ayuda</h4>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h4>Contactanos</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    &copy Nnosotros | 2017
+                </div>
+                <div class="col-md-6 text-right">
+                    redes socialesz
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
