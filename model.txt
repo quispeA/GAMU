@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+-----
+<button id="filtrosmap" data-toggle="modal" data-target="#Filtros1" class="btn-info">Filtros</button>
+------div-----
+
+<div id="Filtros1" class="  modal fade " role="dialog">
+      <div class="modal-dialog">
+        <div class="  modal-content">
+          <div class="jumbotron modal-body">
+ 			<button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class=" modal-body">
+         
+          		 <h3>Filtros aplicados</h3>
+                
+                
+                  <div class="text-center">
+                    <h4>Precio</h4>
+                    <div style="margin-left:15%; " class="text-left">
+                       <label><input type="radio" >S/8 a S/10</label><br>
+                       <label><input type="radio" >S/10 a S/15</label><br>
+                       <label><input type="radio" >S/15 a S/20</label><br>
+                       <label><a type="button"  data-toggle="modal" data-target="#Precioexac">Exactamente</a><br>
+                    </div>
+                    
+                  </div>
+                  <div class="text-center" >
+                    <h4>Tipo de Establecimiento</h4>
+                    <div style="margin-left:15%; " class="text-left">
+                       <label><input type="radio" >Restaurante</label><br>
+                       <label><input type="radio" >Cafe</label><br>
+                       <label><input type="radio" >Bar</label><br>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <h4>Estilo de cocina</h4>
+                    <div style="margin-left:15%; " class="text-left">
+                       <label><input type="radio" >Mariscos</label><br>
+                       <label><input type="radio" >Criolla</label><br>
+                       <label><input type="radio" >Exotica</label><br>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <h4>Otros</h4>
+                    <div style="margin-left:15%; " class="text-left">
+                       <label><input type="radio" >Apto para vegetarianos</label><br>
+                       <label><input type="radio" >Opciones veganas</label><br>
+                       
+                    </div>
+           </div>
+        
+        </div>
+
+      </div>
+    </div>
+   </div>
+   </div>
+
+
+
