@@ -1,0 +1,44 @@
+﻿* {
+    font-family: "museo_sans_rounded100", sans-serif;
+}
+
+
+body{
+    background-color:lightgrey;
+}
+#navegador {
+    margin: 0;
+    padding: 0;
+    height: 80px;
+}
+#menu {
+    margin-top: 10px;
+   
+}
+#ffm {
+    margin-top: 30px;
+    margin-left: 80%;
+    width: 30%;
+}
+#ffm > a {
+    color: white;
+    font-size: 18px;
+}
+#menuizq{
+    margin-left:10%;
+    width:280px;
+    border:1px solid black;
+    padding:30px;
+    min-height:400px;
+}
+
+#grupos >  a {
+    text-decoration: none;
+    text-decoration: underline;
+    font-size: 16px;
+    color: black;
+    cursor:pointer;
+}
+* {
+    border: 1px solid red;
+}
