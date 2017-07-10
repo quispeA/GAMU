@@ -88,18 +88,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\Admin\Admin.aspx" />
+    <Content Include="App\Admin\AgregarCurso.aspx" />
+    <Content Include="App\Admin\AgregarTema.aspx" />
+    <Content Include="App\Admin\Cursos.aspx" />
+    <Content Include="App\Admin\Grupos.aspx" />
+    <Content Include="App\Admin\Temas.aspx" />
     <Content Include="App\Css\LoginSingup.css" />
     <Content Include="App\Css\Paginap.css" />
+    <Content Include="App\Css\Register.css" />
     <Content Include="App\Default.aspx" />
     <Content Include="App\Envio.aspx" />
+    <Content Include="App\Grupo.aspx" />
     <Content Include="App\Login.aspx" />
     <Content Include="App\Main.aspx" />
+    <Content Include="App\Profile.aspx" />
+    <Content Include="App\Registro.aspx" />
+    <Content Include="Files\Publicidad.xml" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Admin\AgregarCurso.aspx.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Admin\AgregarCurso.aspx.designer.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Admin\AgregarTema.aspx.cs">
+      <DependentUpon>AgregarTema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Admin\AgregarTema.aspx.designer.cs">
+      <DependentUpon>AgregarTema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Admin\Cursos.aspx.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Admin\Cursos.aspx.designer.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Admin\Grupos.aspx.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Admin\Grupos.aspx.designer.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Admin\Temas.aspx.cs">
+      <DependentUpon>Temas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Admin\Temas.aspx.designer.cs">
+      <DependentUpon>Temas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -113,6 +166,13 @@
     </Compile>
     <Compile Include="App\Envio.aspx.designer.cs">
       <DependentUpon>Envio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Grupo.aspx.cs">
+      <DependentUpon>Grupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Grupo.aspx.designer.cs">
+      <DependentUpon>Grupo.aspx</DependentUpon>
     </Compile>
     <Compile Include="App\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -128,6 +188,13 @@
     <Compile Include="App\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App\Master\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Master\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="App\Master\Inicio.Master.cs">
       <DependentUpon>Inicio.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -142,6 +209,20 @@
     <Compile Include="App\Master\Principal.Master.designer.cs">
       <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
+    <Compile Include="App\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -153,6 +234,7 @@
     <Content Include="packages.config" />
     <Content Include="App\Master\Inicio.Master" />
     <Content Include="App\Master\Principal.Master" />
+    <Content Include="App\Master\Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

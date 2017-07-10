@@ -34,9 +34,14 @@
 
                     <div id="navbar3" class="navbar-collapse collapse" style="background: #152235;">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="Main.aspx">Inicio</a></li>
-                            <li><a>Iniciar Sesión</a></li>
-                            <li><a href="#">Mi perfil</a></li>
+                            <li><a href="Main.aspx">
+                                <img src="https://cdn1.iconfinder.com/data/icons/basic-tools-8/32/house-home-estate-building-48.png" /></a></li>
+                            <li><a>
+                                <img src="https://cdn4.iconfinder.com/data/icons/blue-business-icons-1/750/cogwheel_gear_configuration_settings_3-48.png" /></a></li>
+                            <li><a>
+                                <img src="https://cdn4.iconfinder.com/data/icons/dark-blue-business-icons/744/marketing_speaker_loud_megaphone_advertising-48.png" /></a></li>
+                            <li><a href="#">
+                                <img src="https://cdn3.iconfinder.com/data/icons/kreis/64/Door-Exit-Sign-Out-48.png" /></a></li>
 
                         </ul>
                     </div>
@@ -64,20 +69,42 @@
                                     </span>
 
                                 </div>
-                                <input type="button" class="btn btn-md btn-primary" value="Editar"/>
+                                <input type="button" class="btn btn-md btn-primary" onclick="location.href='Profile.aspx'" value="Editar" />
 
+                            </div>
+                            <div>
+                                <h4>Descubrir cosas</h4>
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                <asp:Button ID="Button1" runat="server" Text="Buscar" />
                             </div>
                             <div id="grupos">
                                 <h4>Mis Grupos</h4>
-                                <asp:DataList ID="Grupos" runat="server"></asp:DataList>
+                                <asp:DataList ID="Grupos" runat="server" DataSourceID="qsldGrupos" DataKeyField="IdUsuario">
+                                    <ItemTemplate>
+                                        <a href="Grupo.aspx?<%#Eval("IdGrupo")%>"><%#Eval("NombreGrupo")%></a><br />
+                                    </ItemTemplate>
+                                </asp:DataList>
+                                <asp:SqlDataSource runat="server" ID="qsldGrupos" ConnectionString='<%$ ConnectionStrings:DBGAMU2017ConnectionString %>' SelectCommand="SELECT * FROM Usuarios u join GruposUsuarios gu on
+                        (u.IdUsuario=gu.IdUsuario) join Grupos gp on(gu.IdGrupo=gp.IdGrupo) join Temas c on(c.IdTema=gp.IdTema) join Cursos f on(c.IdCurso=f.IdCurso) WHERE (Usuario = @Usuario)">
+                                    <SelectParameters>
+                                        <asp:QueryStringParameter QueryStringField="us" Name="Usuario" Type="String"></asp:QueryStringParameter>
+                                    </SelectParameters>
+                                </asp:SqlDataSource>
+                                <asp:SqlDataSource runat="server" ID="SqlDataSource1"></asp:SqlDataSource>
                                 <a>Ver Todos</a><br />
-                                <a>Crear Grupo</a>
+                                <a data-toggle="modal" data-target="#crear-grupo">Crear Grupo</a>
+
 
                             </div>
                             <div>
                                 <h4>Mis Cursos</h4>
-                                <asp:DataList ID="Cursos" runat="server"></asp:DataList>
+                                <asp:DataList ID="Cursos" runat="server" DataSourceID="qsldGrupos">
+                                    <ItemTemplate>
+                                        <a><%#Eval("NombreCurso")%></a><br />
+                                    </ItemTemplate>
+                                </asp:DataList>
                             </div>
+
 
                         </div>
                     </div>
@@ -89,7 +116,7 @@
 
                 </div>
                 <div class="col-md-7">
-                   
+
 
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
@@ -98,11 +125,80 @@
                 <div class="col-md-2">
                     <div class="container-fluid">
                         <h4>Videoconferencias</h4>
+                        <div>
+                        </div>
+                        <img width="50 " height="50" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoxGgsSxXhS5sNsN0y2XY9oxvaUVjEvI9Dbis7kRvTvrkoxLuyw" />
+                        }  
+                        <input type="button" class="btn-danger btn-md" value="Ver" />
+                        <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
+                    </div>
+                    <div>
+
+                        <h4 style="text-align: center;">Publicidad</h4>
+                        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSource1" />
+
+                        <asp:XmlDataSource runat="server" ID="XmlDataSource1" DataFile="~/Files/Publicidad.xml"></asp:XmlDataSource>
                     </div>
                 </div>
 
             </div>
         </section>
+
+
+
+
+        <div class="modal fade" id="crear-grupo" role="dialog">
+            <div class="modal-dialog " style="width: 450px;">
+                <div class="modal-content">
+
+                    <div class="modal-body text-center " id="mdgrupo">
+                        <h3>Crear Nuevo Grupo</h3>
+
+
+                        <div>
+                            <h4>Nombre del Grupo * </h4>
+                            <asp:TextBox runat="server" ID="NombreGr" placeholder="Nombre del Grupo" Width="90%" Font-Size="13" /><br />
+
+                            <h4>Descripción del Grupo *</h4>
+                            <asp:TextBox TextMode="MultiLine" Rows="4" Columns="50" runat="server" ID="DescripcionTextBox" placeholder="Descripcion del Grupo" Width="90%" Font-Size="13" /><br />
+
+                            <h4>Logo(Link)</h4>
+                            <asp:TextBox ID="Logo" runat="server" Width="90%" Font-Size="13"></asp:TextBox><br />
+                            <h4>Tipo</h4>
+                            <asp:TextBox ID="Tipo" runat="server" Width="90%" Font-Size="13" OnTextChanged="Tipo_TextChanged"></asp:TextBox><br />
+
+                        </div>
+
+
+
+
+
+                        <div>
+                            <h4>Asignar Curso</h4>
+                            <asp:TextBox ID="Curso" runat="server" Width="90%" Font-Size="13" placeholder="Nombre del Curso"></asp:TextBox><br />
+                            <br />
+                            <asp:TextBox TextMode="MultiLine" Rows="3" Columns="50" runat="server" ID="DesCurso" placeholder="Descripcion del Curso" Width="90%" Font-Size="13" /><br />
+                            <br />
+                            <asp:Button ID="AsigCurso" runat="server" Text="Asignar" CssClass="btn-success btn-md" OnClick="AsigCurso_Click" />
+                        </div>
+                        <div>
+                            <h4>Asignar Tema</h4>
+                            <asp:TextBox ID="Tema" runat="server" Width="90%" Font-Size="13" placeholder="Nombre del Tema"></asp:TextBox><br />
+                            <br />
+                            <asp:TextBox TextMode="MultiLine" Rows="3" Columns="50" runat="server" ID="DesTema" placeholder="Descripcion del Tema" Width="90%" Font-Size="13" /><br />
+                            <asp:Button ID="AsigTema" runat="server" Text="Asignar" class="btn-success btn-md" OnClick="AsigTema_Click" />
+                        </div>
+                        <div style="padding: 20px 0px;">
+                            <asp:Button ID="Button2" class="btn boton-crear-grupo btn-info" runat="server" Text="Crear" OnClick="Button2_Click" />
+                            <asp:Button ID="Button3" class="btn boton-crear-grupo btn-danger" runat="server" Text="Cancelar" data-dismiss="modal" />
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </form>
 </body>
 </html>

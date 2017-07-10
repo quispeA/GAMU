@@ -2,19 +2,16 @@
     font-family: "museo_sans_rounded100", sans-serif;
 }
 
+#menu{
+    margin-left:13%;
+} 
 
-body{
-    background-color:lightgrey;
-}
 #navegador {
     margin: 0;
     padding: 0;
-    height: 80px;
+    height: 90px;
 }
-#menu {
-    margin-top: 10px;
-   
-}
+
 #ffm {
     margin-top: 30px;
     margin-left: 80%;
@@ -41,4 +38,10 @@ body{
 }
 * {
     border: 1px solid red;
+}
+
+
+#Banner {
+    height: 200px;
+    background-image: url(http://3.bp.blogspot.com/-emLLGNIy--w/VkzSmlsSLII/AAAAAAAAAaI/pXuisuCi9SI/s1600-r/ventajasnds.png);
 }

@@ -30,7 +30,7 @@ namespace Gamu3._0.App
                 if (salida!=0)
                 {
                     var usuario = user.Text;
-                    Response.Redirect("PagMain.aspx?"+usuario);
+                    Response.Redirect("Main.aspx?us="+usuario);
                 }
                 else
                 {

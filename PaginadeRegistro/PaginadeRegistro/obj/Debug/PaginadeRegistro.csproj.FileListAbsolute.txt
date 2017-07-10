@@ -1,6 +1,0 @@
-c:\users\alumno\documents\visual studio 2013\Projects\PaginadeRegistro\PaginadeRegistro\bin\PaginadeRegistro.dll.config
-c:\users\alumno\documents\visual studio 2013\Projects\PaginadeRegistro\PaginadeRegistro\bin\PaginadeRegistro.dll
-c:\users\alumno\documents\visual studio 2013\Projects\PaginadeRegistro\PaginadeRegistro\bin\PaginadeRegistro.pdb
-c:\users\alumno\documents\visual studio 2013\Projects\PaginadeRegistro\PaginadeRegistro\obj\Debug\PaginadeRegistro.csprojResolveAssemblyReference.cache
-c:\users\alumno\documents\visual studio 2013\Projects\PaginadeRegistro\PaginadeRegistro\obj\Debug\PaginadeRegistro.dll
-c:\users\alumno\documents\visual studio 2013\Projects\PaginadeRegistro\PaginadeRegistro\obj\Debug\PaginadeRegistro.pdb
