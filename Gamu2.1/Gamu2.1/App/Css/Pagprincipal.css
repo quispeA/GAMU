@@ -1,0 +1,43 @@
+﻿*{
+    font-size:18px;
+}
+#mainNav {
+    background-color: white;
+   
+}
+#men > li > a, #headmen {
+    color: black;
+} 
+#men{
+    margin-right:10px;
+}
+#footerdiv {
+    padding: 20px;
+    color: white;
+}
+#margen{
+ padding-top: 3.7%;
+}
+#menuperfil {
+    margin-right: 4%;
+    background: #F0EDED;
+}
+#menuperfil > li > a {
+    font-size: 18px;
+    margin: auto;
+    cursor:pointer;
+}
+*{
+    border:1px solid red;
+}
+#roles > div {
+    padding: 20px;
+    
+    cursor:pointer;
+}
+    #roles > div:matches(:hover) {
+        background-color: #F0EDED;
+    }
+#grupos, #cursos{
+    background-color:darkgray;
+}

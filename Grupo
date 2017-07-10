@@ -1,0 +1,43 @@
+on id="dividir">
+                    <div class="image">
+                        <a href="https://www.google.com.pe"><img width="200" src ="https://images01.olx-st.com/ui/53/98/48/74/o_1496939393_2b54d401be06a2facc7f10a93fc34eca.jpg" /></a>
+                        <h4 style="text-align:center;">Matematica</h4>
+                    </div>
+                    <br />
+                    <div class="image">
+                        <a href="https://www.google.com.pe"><img width="200" src="https://compartiendolaciencia.files.wordpress.com/2016/05/fisica.jpg?w=1000" /></a>
+                        <h4 style="text-align:center;">Fisica</h4>
+                    </div>  
+                </section>
+
+            </section>
+        </div>
+    </form>
+</body>
+
+
+#dividir {
+    margin-left: 50%;
+    border: 1px solid yellow;
+    min-height: 400px;
+}
+
+#centro {
+    text-align:center;
+    border: 1px solid black;
+
+}
+#izq {
+    border: 1px solid black;
+    background-color:#e99393;
+}
+.image{
+    margin-top:15px;
+    text-align:center;
+}
+#divizq{
+    float:left;
+   
+    width:50%;
+   
+}

@@ -1,0 +1,9 @@
+#contPubli{
+
+    text-align:center;
+    margin-left:70%;
+   border:1px solid black;
+    
+    min-height:30%;
+
+}

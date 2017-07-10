@@ -1,0 +1,22 @@
+﻿*{
+    font-family: RalewayMedium,Helvetica,sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    border:1px solid red;
+}
+
+header {
+    background-color: #475262;
+    color: black;
+}
+#registro {
+    width: 60%;
+    margin: auto;
+   padding: 30px;
+}
+#btnres {
+    margin-top: 20px;
+}
+footer{
+    clear:both;
+}
