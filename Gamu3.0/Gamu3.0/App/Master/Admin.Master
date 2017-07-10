@@ -1,6 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Gamu3._0.App.Master.Admin" %>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head runat="server">

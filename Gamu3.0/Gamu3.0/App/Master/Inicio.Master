@@ -49,6 +49,8 @@
         <footer class="bg-dark" style="background-color: #222222; clear: both;">
             <div style="margin: auto;">
                 <div class="row text-center" id="footerdiv">
+                    <h3><a href="../Admin/Grupos.aspx">Acceder como administrador</a></h3>
+                    
                     <div class="col-lg-4 col-xs-8" id="footermen1">
                         <h4>Sobre Nosotros</h4>
 
