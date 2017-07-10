@@ -36,7 +36,7 @@ namespace Multi
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                if (dt.Rows.Count!=0)
+                if (dt.Rows.Count != 0)
                 {
                     if (CheckBox1.Checked)
                     {
@@ -45,17 +45,28 @@ namespace Multi
                         Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(15);
                         Response.Cookies["PWD"].Expires = DateTime.Now.AddDays(15);
 
-                       
+
 
                     }
                     else
                     {
-                     Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(-1);
-                     Response.Cookies["PWD"].Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies["PWD"].Expires = DateTime.Now.AddDays(-1);
 
                     }
-                    Session["USERNAME"] = usuario.Text;
-                    Response.Redirect("userhome.aspx");
+                    string tipoUsuraio;
+                    tipoUsuraio = dt.Rows[0][8].ToString().Trim();
+                    if (tipoUsuraio=="u")
+                    {
+                        Session["USERNAME"] = usuario.Text;
+                        Response.Redirect("userhome.aspx");
+                    }
+                    if(tipoUsuraio=="a")
+                    {
+                        Session["USERNAME"] = usuario.Text;
+                        Response.Redirect("Admin.aspx");
+                    }
+                   
 
                 }
                 else

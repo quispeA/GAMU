@@ -1,0 +1,81 @@
+﻿* {
+    font-family: "museo_sans_rounded100", sans-serif;
+}
+
+#navegador {
+    margin: 0;
+    padding: 0;
+    height:80px;
+}
+#menu{
+    margin-top:10px;
+}
+
+
+#centro {
+    width: 86%;
+    margin: auto;
+    
+    -moz-box-shadow: 0 0 100px #888;
+    -webkit-box-shadow: 0 0 100px #888;
+    box-shadow: 0 0 100px #888;
+}
+#divprinc {
+    height: 420px;
+    background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/s2fa808e648970ab5/image/if9fcd92affb0052c/version/1436320725/image.png);
+    margin-bottom: 50px;
+    background-position:bottom right;
+    background-repeat:no-repeat;
+}
+#gamuInfo {
+    -moz-box-shadow: 0 0 10px #888;
+    -webkit-box-shadow: 0 0 10px #888;
+    box-shadow: 0 0 10px #888;
+    
+    margin-left: 5%;
+    margin-top: 10%;
+    background: white;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border: 1px solid cornflowerblue;
+}
+
+#fLogin {
+    height: 500px;
+    background-size: 100%;
+}
+#formLoging {
+    margin: 5%;
+    background: lightgray;
+    padding-bottom: 40px;
+    border-radius: 10px;
+}
+#secHome {
+    padding: 80px 0;
+
+}
+#enviaremail{
+    margin-top:12%;
+    margin-right:50px;
+    width:90%;
+    border-radius:10px;
+}
+#divCorreo, #divInc {
+    width: 70%;
+    padding-top:20px;
+}
+#divEnvio {
+    margin: 100px 35%;
+    width: 30%;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 12px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+#fnEnvio {
+    background-image: url(https://static.pexels.com/photos/94356/pexels-photo-94356.jpeg);
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 450px;
+}

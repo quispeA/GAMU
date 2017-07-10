@@ -28,7 +28,7 @@ namespace Multi
                 String CS = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
                 using (SqlConnection con = new SqlConnection(CS))
                 {
-                    SqlCommand cmd = new SqlCommand("Insert into Usuarios (Usuario, NombreUsuario, ApellidoUsuario, Correro, Universidad, pass) values ('"+usuario.Text+"','"+nombre.Text+"','"+apellidos.Text+"','"+email.Text+"','"+universidad.Text+"','"+contra.Text+"')", con);
+                    SqlCommand cmd = new SqlCommand("Insert into Usuarios (Usuario, NombreUsuario, ApellidoUsuario, Correro, Universidad, pass, tipoUsuario) values ('"+usuario.Text+"','"+nombre.Text+"','"+apellidos.Text+"','"+email.Text+"','"+universidad.Text+"','"+contra.Text+"','u')", con);
                     con.Open();
                     cmd.ExecuteNonQuery();
                         Label1.ForeColor = Color.Green;
