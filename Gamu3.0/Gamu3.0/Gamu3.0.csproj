@@ -88,8 +88,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App\AdminPaginas\Admin.aspx" />
+    <Content Include="App\AdminPaginas\AgregarCurso.aspx" />
+    <Content Include="App\AdminPaginas\AgregarTema.aspx" />
+    <Content Include="App\AdminPaginas\Cursos.aspx" />
+    <Content Include="App\AdminPaginas\Grupos.aspx" />
+    <Content Include="App\AdminPaginas\Temas.aspx" />
+    <Content Include="App\Css\Admin.css" />
     <Content Include="App\Css\LoginSingup.css" />
-    <Content Include="App\Css\Paginap.css" />
+    <Content Include="App\Css\Principal.css" />
     <Content Include="App\Default.aspx" />
     <Content Include="App\Envio.aspx" />
     <Content Include="App\Login.aspx" />
@@ -100,6 +107,48 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\AdminPaginas\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\AdminPaginas\AgregarCurso.aspx.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\AdminPaginas\AgregarCurso.aspx.designer.cs">
+      <DependentUpon>AgregarCurso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\AdminPaginas\AgregarTema.aspx.cs">
+      <DependentUpon>AgregarTema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\AdminPaginas\AgregarTema.aspx.designer.cs">
+      <DependentUpon>AgregarTema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Cursos.aspx.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Cursos.aspx.designer.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Grupos.aspx.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Grupos.aspx.designer.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Temas.aspx.cs">
+      <DependentUpon>Temas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\AdminPaginas\Temas.aspx.designer.cs">
+      <DependentUpon>Temas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +177,13 @@
     <Compile Include="App\Main.aspx.designer.cs">
       <DependentUpon>Main.aspx</DependentUpon>
     </Compile>
+    <Compile Include="App\Master\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App\Master\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="App\Master\Inicio.Master.cs">
       <DependentUpon>Inicio.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,6 +209,7 @@
     <Content Include="packages.config" />
     <Content Include="App\Master\Inicio.Master" />
     <Content Include="App\Master\Principal.Master" />
+    <Content Include="App\Master\Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

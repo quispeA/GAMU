@@ -11,7 +11,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Gamu</title>
-    <link href="../Css/Paginap.css" rel="stylesheet" />
+    <link href="../Css/Principal.css" rel="stylesheet" />
+
+
     <style>
         
     </style>
@@ -35,7 +37,8 @@
                     <div id="navbar3" class="navbar-collapse collapse" style="background: #152235;">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="Main.aspx">Inicio</a></li>
-                            <li><a>Iniciar Sesión</a></li>
+                            <li><a>Salir</a></li>
+
                             <li><a href="#">Mi perfil</a></li>
 
                         </ul>
@@ -81,12 +84,6 @@
 
                         </div>
                     </div>
-
-
-
-
-
-
                 </div>
                 <div class="col-md-7">
                    

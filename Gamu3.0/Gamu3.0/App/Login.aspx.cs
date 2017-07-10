@@ -6,16 +6,13 @@ using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 namespace Gamu3._0.App
 {
     public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             if (user.Text != "" && pass.Text != "")
@@ -30,7 +27,7 @@ namespace Gamu3._0.App
                 if (salida!=0)
                 {
                     var usuario = user.Text;
-                    Response.Redirect("PagMain.aspx?"+usuario);
+                    Response.Redirect("Main.aspx?"+usuario);
                 }
                 else
                 {
