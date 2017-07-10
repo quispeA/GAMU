@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="Gamu3._0.App.Master.Principal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Gamu</title>
+    <link href="../Css/Principal.css" rel="stylesheet" />
+
+
+    <style>
+        
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top text-right" style="background: #152235; color: white;" id="navegador">
+                <div class="container " id="menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div id="navbar3" class="navbar-collapse collapse" style="background: #152235;">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="Main.aspx">Inicio</a></li>
+                            <li><a>Salir</a></li>
+
+                            <li><a href="#">Mi perfil</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div style="padding-top: 80px;">
+            </div>
+
+        </header>
+        <section>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-xs-4 text-center">
+                    <div class="left_sidebar">
+                        <div class="sidebar">
+                            <div class="sidebar_profile_section">
+                                <img src="https://cdn1.iconfinder.com/data/icons/handy-vol-8/100/Artboard_24-128.png" />
+                                <div class="name">
+                                    <span>
+                                        <asp:Label ID="Usuario" runat="server" Text="sss"></asp:Label>
+
+                                    </span>
+                                    <br />
+                                    <span>
+                                        <asp:Label ID="Rol" runat="server" Text="Label"></asp:Label>
+                                    </span>
+
+                                </div>
+                                <input type="button" class="btn btn-md btn-primary" value="Editar"/>
+
+                            </div>
+                            <div id="grupos">
+                                <h4>Mis Grupos</h4>
+                                <asp:DataList ID="Grupos" runat="server"></asp:DataList>
+                                <a>Ver Todos</a><br />
+                                <a>Crear Grupo</a>
+
+                            </div>
+                            <div>
+                                <h4>Mis Cursos</h4>
+                                <asp:DataList ID="Cursos" runat="server"></asp:DataList>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                   
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="container-fluid">
+                        <h4>Videoconferencias</h4>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </form>
+</body>
+</html>
